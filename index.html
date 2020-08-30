@@ -7,46 +7,78 @@
 .pagestructure{
     width: 100%;
     display: grid;
-    grid-template-rows: 30px 1fr 40px 40px;
-    grid-template-columns: 1fr 240px;
+    grid-template-rows: 30px 1fr 44px 1fr 40px 40px;
+    grid-template-columns: 240px 240px;
     grid-template-areas:
-    "blank blank header"
-    "land land land"
-    "footfirst footfirst footfirst"
-    "footsecond footsecond footsecond"
+    "blank header"
+    "land land"
+    "search search"
+    "buttonforsearching buttonlucky"
+    "footfirst footfirst"
+    "helplink businesslink"
 
 }
 .topbar{
     grid-area: header;
+    color: rgba(0,0,0,0.87);
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    justify-self: end;
 }
 .logo{
     grid-area: land;
+    justify-self: center;
     }
 .searchbar{
-    grid-area: land;
+    grid-area: search;
+    justify-self: center;
 }
 .searchbutton{
-    grid-area: land;
+    grid-area: buttonforsearching;
+    justify-self: end;
+    padding-right: 20px;
 }
 .feelinglucky{
-    grid-area: land;
+    grid-area: buttonlucky;
+    padding-left: 20px;
 }
 .higherbar{
     grid-area: footfirst;
+    background: #f2f2f2;
+    color: rgba(0,0,0,0.54);
+    font-family: arial,sans-serif;
+    font-size: 14px;
+    padding-left: 30px;
+    padding-top: 13px;
 }
-.lowerbar{
-    grid-area: footsecond;
+.lowerbarhelp{
+    grid-area: helplink;
+    background: #f2f2f2;
+    color: rgb(95,99,104);
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    padding-left: 30px;
+}
+.lowerbarbusiness{
+    grid-area: businesslink;
+    background: #f2f2f2;
+    color: rgb(95,99,104);
+    font-family: arial,sans-serif;
+    font-size: 13px;
+    padding-left: 30px;
 }
 </style>
 <body>
     <div class="pagestructure">
-        <div class="topbar">K</div>
-        <img  class="logo"src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        <div class="topbar"><a href="#">Gmail</a></div>
+        <img  class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         alt="Google logo">
         <div class="searchbar">bar</div>
+        <div class="searchbutton">Search!</div>
         <div class="feelinglucky">luck</div>
-        <div class="higherbar">help</div>
-        <div class="lowerbar">business</div>
+        <div class="higherbar">Country</div>
+        <div class="lowerbarhelp">help</div>
+        <div class="lowerbarbusiness">business</div>
     </div>
 
 
