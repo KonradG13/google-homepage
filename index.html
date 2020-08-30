@@ -1,12 +1,54 @@
 <!DOCTYPE html>
 <html>
-,<head>
+<head>
     <title>Google by KonradG13</title>
 </head>
+<style>
+.pagestructure{
+    width: 100%;
+    display: grid;
+    grid-template-rows: 30px 1fr 40px 40px;
+    grid-template-columns: 1fr 240px;
+    grid-template-areas:
+    "blank blank header"
+    "land land land"
+    "footfirst footfirst footfirst"
+    "footsecond footsecond footsecond"
+
+}
+.topbar{
+    grid-area: header;
+}
+.logo{
+    grid-area: land;
+    }
+.searchbar{
+    grid-area: land;
+}
+.searchbutton{
+    grid-area: land;
+}
+.feelinglucky{
+    grid-area: land;
+}
+.higherbar{
+    grid-area: footfirst;
+}
+.lowerbar{
+    grid-area: footsecond;
+}
+</style>
 <body>
-<img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
- alt="Google logo"
-style="padding:110px">
+    <div class="pagestructure">
+        <div class="topbar">K</div>
+        <img  class="logo"src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+        alt="Google logo">
+        <div class="searchbar">bar</div>
+        <div class="feelinglucky">luck</div>
+        <div class="higherbar">help</div>
+        <div class="lowerbar">business</div>
+    </div>
+
 
 
 
