@@ -8,7 +8,7 @@
     width: 100%;
     display: grid;
     grid-template-rows: 30px 1fr 44px 1fr 40px 40px;
-    grid-template-columns: 240px 240px;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "blank header"
     "land land"
@@ -58,6 +58,9 @@
     font-family: arial,sans-serif;
     font-size: 13px;
     padding-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill; auto);
+    justify-items: start;
 }
 .lowerbarbusiness{
     grid-area: businesslink;
@@ -66,6 +69,9 @@
     font-family: arial,sans-serif;
     font-size: 13px;
     padding-left: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 0.5fr);
+    justify-items: end;
 }
 </style>
 <body>
@@ -73,12 +79,22 @@
         <div class="topbar"><a href="#">Gmail</a></div>
         <img  class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         alt="Google logo">
-        <div class="searchbar">bar</div>
-        <div class="searchbutton">Search!</div>
-        <div class="feelinglucky">luck</div>
+        <div class="searchbar"><form action="https://google.com"><input type="text" placeholder=""></form></div>
+        <div class="searchbutton"><button type="submit">Google Search</button></div>
+        <div class="feelinglucky"><button type="button">I'm Feeling Lucky</button></div>
         <div class="higherbar">Country</div>
-        <div class="lowerbarhelp">help</div>
-        <div class="lowerbarbusiness">business</div>
+        <div class="lowerbarhelp">
+            <div><a href="#">Advertising</a></div>
+            <div><a href="#">Business</a></div>
+            <div><a href="#">About</a></div>
+            <div><a href="#">How Search works</a></div>
+        </div>
+        <div class="lowerbarbusiness">
+            <div><a href="#">Privacy</a></div>
+            <div><a href="#">Terms</a></div>
+            <div><a href="#">Settings</a></div>
+            
+        </div>
     </div>
 
 
