@@ -4,10 +4,15 @@
     <title>Google by KonradG13</title>
 </head>
 <style>
+a:link{
+    text-decoration: none;
+}
+
 .pagestructure{
     width: 100%;
+    height: 100vh;
     display: grid;
-    grid-template-rows: 30px 1fr 44px 1fr 40px 40px;
+    grid-template-rows: 30px auto 44px 1fr 40px 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
     "blank header"
@@ -24,13 +29,24 @@
     font-family: arial,sans-serif;
     font-size: 13px;
     justify-self: end;
+    display:grid;
+    grid-template-columns: 34px 73px 30px 45px 30px;
+    justify-items: end;
+    align-items: center;
+}
+.topbar a:link{
+    text-decoration: none;
+    color: rgba(0,0,0,0.87);
 }
 .logo{
     grid-area: land;
+    margin-top: 59px;
+    padding-top: 79px;
     justify-self: center;
     }
 .searchbar{
     grid-area: search;
+    margin-top: 5px;
     justify-self: center;
 }
 .searchbutton{
@@ -47,36 +63,52 @@
     background: #f2f2f2;
     color: rgba(0,0,0,0.54);
     font-family: arial,sans-serif;
-    font-size: 14px;
+    font-size: 15px;
     padding-left: 30px;
-    padding-top: 13px;
+    padding-top: 11.5px;
 }
 .lowerbarhelp{
     grid-area: helplink;
     background: #f2f2f2;
     color: rgb(95,99,104);
     font-family: arial,sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 30px;
+    padding-top: 11.5px;
     display: grid;
-    grid-template-columns: repeat(auto-fill; minmax(10px;1fr));
-    justify-items: start;
+    grid-template-columns: 96px 83px 64px 144px 1fr;
+    
+}
+.lowerbarhelp a:link{
+    text-decoration: none;
+    color: rgb(95,99,104);
 }
 .lowerbarbusiness{
     grid-area: businesslink;
     background: #f2f2f2;
     color: rgb(95,99,104);
     font-family: arial,sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     padding-left: 30px;
+    padding-top: 11.5px;
     display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
+    grid-template-columns: 1fr 73px 65px 78px;
     justify-items: end;
+}
+.lowerbarbusiness a:link{
+    text-decoration: none;
+    color: rgb(95,99,104);
 }
 </style>
 <body>
     <div class="pagestructure">
-        <div class="topbar"><a href="#">Gmail</a></div>
+        <div class="topbar">
+            <div><a href="#">Gmail</a></div>
+            <div><a href="#">images</a></div>
+            <div><a href="#">G</a></div>
+            <img src="https://lh3.googleusercontent.com/ogw/ADGmqu_hlcnQa-ZU9S5-jSBoS73u_QUTYP4LUggTYUCU=s32-c-mo" alt="Account access">
+
+        </div>
         <img  class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         alt="Google logo">
         <div class="searchbar"><form action="https://google.com"><input type="text" placeholder=""></form></div>
@@ -90,6 +122,7 @@
             <div><a href="#">How Search works</a></div>
         </div>
         <div class="lowerbarbusiness">
+            <div></div>
             <div><a href="#">Privacy</a></div>
             <div><a href="#">Terms</a></div>
             <div><a href="#">Settings</a></div>
