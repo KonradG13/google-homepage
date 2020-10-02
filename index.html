@@ -28,6 +28,7 @@ a:link{
     color: rgba(0,0,0,0.87);
     font-family: arial,sans-serif;
     font-size: 13px;
+    margin-top: 10px;
     justify-self: end;
     display:grid;
     grid-template-columns: 34px 73px 30px 45px 30px;
@@ -40,8 +41,8 @@ a:link{
 }
 .logo{
     grid-area: land;
-    margin-top: 59px;
-    padding-top: 79px;
+    padding-top: 109px;
+    padding-bottom: 32px;
     justify-self: center;
     }
 .searchbar{
@@ -49,20 +50,26 @@ a:link{
     margin-top: 5px;
     justify-self: center;
     background-color: transparent;
-    border: 1px;
-    border-radius: 50%;
-    margin: 0;
-    padding: 0;
-    color: rgba(0,0,0,.87);
-    outline: none;
-    font-size: 16px;
+    display: grid;
+    grid-template-columns: 45px minmax(50px, 486px) 35px;
+    justify-items: center;
+    align-items: center;
+    border-top: 0.5px solid rgb(226, 226, 226);
+    border-bottom: 0.5px solid rgb(226, 226, 226);
+    border-left: 0.5px solid rgb(226, 226, 226);
+    border-right: 0.5px solid rgb(226, 226, 226);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
+.searchimg{justify-self: center;}
+.voiceimg{justify-self: left;}
 .searchform{
-    grid-area: search;
     margin-top: 5px;
-    justify-self: center;
+    justify-self: left;
     background-color: transparent;
-    border: none;
+    border:none;
     margin: 0;
     padding: 0;
     color: rgba(0,0,0,.87);
@@ -74,10 +81,12 @@ a:link{
     grid-area: buttonforsearching;
     justify-self: end;
     padding-right: 20px;
+    padding-top: 30px;
 }
 .feelinglucky{
     grid-area: buttonlucky;
     padding-left: 20px;
+    padding-top: 30px;
 }
 .higherbar{
     grid-area: footfirst;
@@ -157,11 +166,11 @@ a:link{
         </div>
         <img  class="logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
         alt="Google logo">
-        <div class="searchbar" border: 1px; border-radius: 50%; border-color: black>
+        <div class="searchbar">
             
-            <a href="#"><img src="search.png" alt="Search Button" width="20px" height="20px"> </a>
+            <div class="searchimg"><a href="#"><img src="search.png" alt="Search Button" width="20px" height="20px"> </a></div>
             <input type="text" placeholder="" class="searchform">
-            <a href="#"><img src="voice.png" alt="Voice Search" width="24px" height="24px"> </a>
+            <div class="voiceimg"><a href="#"><img src="voice.png" alt="Voice Search" width="24px" height="24px"> </a></div>
         </div>
         <div class="searchbutton"><button class="buttons" type="submit">Google Search</button></div>
         <div class="feelinglucky"><button class="buttons" type="button">I'm Feeling Lucky</button></div>
@@ -181,14 +190,5 @@ a:link{
         </div>
     </div>
 
-
-
-
-
-
 </body>
-
-
-
-
 </html>
